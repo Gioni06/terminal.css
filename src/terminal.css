@@ -3,7 +3,7 @@
     --global-line-height: 1.4rem;
     --global-space: 10px;
     --font-stack: 'Fira Code',Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
-    --background-color: var(--invert-font-color);
+    --background-color: #fff;
     --page-width: 70em;
     --font-color: #151513;
     --invert-font-color: #fff;
