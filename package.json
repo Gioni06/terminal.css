@@ -4,13 +4,14 @@
   "description": "Modern and minimalistic CSS framework for terminal enthusiasts",
   "main": "dist/terminal.min.css",
   "directories": {
-    "doc": "docs",
+    "docs": "docs",
     "dist": "dist"
   },
   "scripts": {
     "start": "node ./scripts/start.js",
     "build": "node ./scripts/build.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "npm run build && npm publish"
   },
   "repository": {
     "type": "git",
