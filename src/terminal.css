@@ -67,7 +67,6 @@ pre code {
 }
 
 a {
-    display: flex;
     cursor: pointer;
     color: var(--primary-color);
     text-decoration: none;
