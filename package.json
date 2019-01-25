@@ -11,7 +11,7 @@
     "start": "node ./scripts/start.js",
     "build": "node ./scripts/build.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "publish": "npm run build && npm publish"
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
