@@ -44,26 +44,26 @@ fieldset {
 }
 
 pre {
-     display: block;
+    display: block;
     word-break: break-all;
     word-wrap: break-word;
     color: #333;
     background-color: #f5f5f5;
     border: 1px solid #ccc;
     padding: var(--global-space);
-  white-space: pre-wrap;       /* css-3 */
- white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
- white-space: -pre-wrap;      /* Opera 4-6 */
- white-space: -o-pre-wrap;    /* Opera 7 */
- word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    white-space: pre-wrap; /* css-3 */
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
 }
 
 pre code {
-  overflow-x: scroll;
-  padding: 0;
-  margin: 0;
-  display: inline-block;
-  min-width: 100%;
+    overflow-x: scroll;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    min-width: 100%;
 }
 
 a {
@@ -235,7 +235,7 @@ p {
 
 img {
     width: 100%;
-} 
+}
 
 .progress-bar {
     height: 8px;
@@ -265,7 +265,7 @@ img {
 }
 
 .progress-bar-filled:after {
-    color: var(--progress-bar-fill);;
+    color: var(--progress-bar-fill);
     content: attr(data-filled);
     display: block;
     font-size: 12px;
@@ -292,6 +292,7 @@ table {
     color: var(--font-color);
     font-size: var(--global-font-size);
 }
+
 table tfoot tr th {
     font-weight: 500;
 }
@@ -329,7 +330,7 @@ fieldset {
 
 label {
     font-size: 1em;
-    color: var(--font-color)
+    color: var(--font-color);
 }
 
 input[type="email"], input[type="text"], input[type="number"], input[type="password"], input[type="search"] {
@@ -348,19 +349,17 @@ input[type="email"]:focus, input[type="text"]:focus, input[type="number"]:focus,
 }
 
 input[type="text"]:not(:placeholder-shown):invalid,
-input[type="email"]:not(:placeholder-shown):invalid,  
-input[type="password"]:not(:placeholder-shown):invalid,  
-input[type="search"]:not(:placeholder-shown):invalid,  
-input[type="number"]:not(:placeholder-shown):invalid  {
+input[type="email"]:not(:placeholder-shown):invalid,
+input[type="password"]:not(:placeholder-shown):invalid,
+input[type="search"]:not(:placeholder-shown):invalid,
+input[type="number"]:not(:placeholder-shown):invalid {
     border-color: var(--primary-color);
 }
-
 
 .form-group {
     margin-bottom: var(--global-line-height);
     overflow: auto;
 }
-
 
 textarea {
     height: auto;
@@ -374,7 +373,7 @@ textarea {
 }
 
 textarea:focus {
-     outline: none;
+    outline: none;
     -webkit-appearance: none;
     border: 1px solid var(--font-color);
 }
@@ -382,8 +381,6 @@ textarea:focus {
 textarea:not(:placeholder-shown):invalid {
     border-color: var(--primary-color);
 }
-
-
 
 .btn {
     display: -ms-inline-flexbox;
@@ -402,7 +399,7 @@ textarea:not(:placeholder-shown):invalid {
     -ms-user-select: none;
     user-select: none;
     position: relative;
-    z-index: 1
+    z-index: 1;
 }
 
 .btn:active {
@@ -588,11 +585,11 @@ textarea:not(:placeholder-shown):invalid {
 
 .alert-success {
     color: var(--success-color);
-    border-color:var(--success-color);
+    border-color: var(--success-color);
 }
 
 .alert-error {
-    color:var(--error-color);
+    color: var(--error-color);
     border-color: var(--error-color);
 }
 
