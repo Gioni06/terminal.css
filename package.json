@@ -1,0 +1,39 @@
+{
+  "name": "terminal.css",
+  "version": "0.0.1",
+  "description": "Modern and minimalistic CSS framework for terminal enthusiasts",
+  "main": "dist/terminal.min.css",
+  "directories": {
+    "doc": "docs",
+    "dist": "dist"
+  },
+  "scripts": {
+    "start": "serve -l 3000 ./docs",
+    "build": "node ./scripts/build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gioni06/terminal.css.git"
+  },
+  "keywords": [
+    "CSS",
+    "Framework",
+    "Grid",
+    "Terminal",
+    "Style"
+  ],
+  "author": "Jonas Duri <https://jduri.xyz>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gioni06/terminal.css/issues"
+  },
+  "homepage": "https://github.com/Gioni06/terminal.css#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.4.6",
+    "mkdirp": "^0.5.1",
+    "postcss": "^7.0.14",
+    "serve": "^10.1.1",
+    "clean-css": "^4.2.1"
+  }
+}
