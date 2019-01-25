@@ -330,3 +330,5 @@ ASALocalRun/
 .mfractor/
 
 dist/
+/dist
+/dist/*
