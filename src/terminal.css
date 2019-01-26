@@ -153,13 +153,14 @@ ul > li:after {
     content: "-";
 }
 
-ol {
-    counter-reset: a;
+ol li:before {
+  content: counters(item, ".") ". ";
+  counter-increment: item
 }
 
-ol > li:after {
-    content: counter(a) ".";
-    counter-increment: a;
+ol ol li:before {
+  content: counters(item, ".") " ";
+  counter-increment: item
 }
 
 ol li:nth-child(n+10):after {
