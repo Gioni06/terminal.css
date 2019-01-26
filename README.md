@@ -1,6 +1,7 @@
 # Terminal CSS
 
-Modern and minimalistic CSS framework for *terminal* lovers ❤️
+Modern and minimalistic CSS framework for *terminal* lovers ❤️.   
+Visit the website [terminalcss.xyz](https://terminalcss.xyz/)
 
 ## Goal
 
