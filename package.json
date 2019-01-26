@@ -29,7 +29,7 @@
   "bugs": {
     "url": "https://github.com/Gioni06/terminal.css/issues"
   },
-  "homepage": "https://github.com/Gioni06/terminal.css#readme",
+  "homepage": "https://terminalcss.xyz",
   "devDependencies": {
     "autoprefixer": "^9.4.6",
     "chokidar": "^2.0.4",
