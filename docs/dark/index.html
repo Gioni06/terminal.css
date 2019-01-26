@@ -8,6 +8,22 @@
     <link rel="stylesheet" href="/terminal.min.css" />
   </head>
   <style>
+	:root {
+		--global-font-size: 14px;
+		--global-line-height: 1.4em;
+		--global-space: 10px;
+		--font-stack: 'Fira Code',Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
+		--background-color: #14171a;
+		--page-width: 70em;
+		--font-color: #d9e0e2;
+		--invert-font-color: #131719;
+		--secondary-color: #657786;
+		--tertiary-color: #14171a;
+		--primary-color: #1da1f2;
+		--error-color: rgb(224, 36, 94);
+		--progress-bar-background: #e1e8ed;
+		--progress-bar-fill: #aab8c2;
+	}
     .components-grid {
       display: grid;
       grid-column-gap: 1em;
@@ -44,8 +60,8 @@
           </header>
         <nav class="terminal-menu">
           <ul>
-            <li>
-              <a class="menu-item" href="/dark/">Dark Version</a>
+			<li>
+              <a class="menu-item" href="/">Light Version</a>
             </li>
             <li>
               <a class="menu-item" href="https://github.com/Gioni06/terminal.css">Github</a>
@@ -70,6 +86,10 @@
           maximal control.
         </p>
       </section>
+	  <section>
+		  <h2>Dark Version</h2>
+		  <p>To create your own Terminal CSS theme just edit the `:root` CSS Variables</p>
+	  </section>
       <section>
         <h2>Credits</h2>
         <p>
