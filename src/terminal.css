@@ -343,6 +343,8 @@ input[type="email"], input[type="text"], input[type="number"], input[type="passw
     padding: .5em;
     font-size: 1em;
     font-family: var(--font-stack);
+    -webkit-appearance: none;
+    border-radius: 0;
 }
 
 input[type="email"]:active, input[type="text"]:active, input[type="number"]:active, input[type="password"]:active, input[type="search"]:active
@@ -374,6 +376,8 @@ textarea {
     padding: .5em;
     font-size: 1em;
     font-family: var(--font-stack);
+     -webkit-appearance: none;
+     border-radius: 0;
 }
 
 textarea:focus {
@@ -389,8 +393,6 @@ textarea:not(:placeholder-shown):invalid {
 input, textarea {
     color: var(--font-color);
     background-color: var(--background-color);
-    -webkit-appearance: none;
-     border-radius: 0;
 }
 
 input::placeholder, textarea::placeholder {
