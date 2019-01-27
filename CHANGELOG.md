@@ -1,8 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## Unreleased
-- Add image with caption component
+## [0.3.1] - 2019-01-27
+### Added
+- Add option to style text selection colors
+
+### Fixed
+- Fix iOS `input` element border radius
 
 ## [0.3.0] - 2019-01-27
 ### Updated
