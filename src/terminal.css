@@ -20,6 +20,9 @@
     text-rendering: geometricPrecision;
 }
 
+*::-moz-selection { background: var(--primary-color); color: var(--invert-font-color); }
+*::selection { background: var(--primary-color); color: var(--invert-font-color);  }
+
 body {
     font-size: var(--global-font-size);
     color: var(--font-color);
