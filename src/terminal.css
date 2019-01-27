@@ -693,6 +693,19 @@ input::placeholder, textarea::placeholder {
     padding: 0;
 }
 
+figure {
+    margin: 0;
+}
+
+figure > img {
+    padding: 0;
+}
+
+figure > figcaption {
+    color: var(--tertiary-color);
+    text-align: center;
+}
+
 .hljs {
   display: block;
   overflow-x: auto;
