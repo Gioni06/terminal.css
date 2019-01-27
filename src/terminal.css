@@ -386,6 +386,8 @@ textarea:not(:placeholder-shown):invalid {
 input, textarea {
     color: var(--font-color);
     background-color: var(--background-color);
+    -webkit-appearance: none;
+     border-radius: 0;
 }
 
 input::placeholder, textarea::placeholder {
