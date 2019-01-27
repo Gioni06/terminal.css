@@ -1,18 +1,18 @@
 :root {
     --global-font-size: 14px;
-    --global-line-height: 1.4rem;
+    --global-line-height: 1.4em;
     --global-space: 10px;
     --font-stack: 'Fira Code',Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
     --background-color: #fff;
-    --page-width: 70em;
-    --font-color: #444444;
+    --page-width: 60em;
+    --font-color: #151515;
     --invert-font-color: #fff;
-    --secondary-color: #9ba5a8;
-    --tertiary-color: #9ba5a8;
-    --primary-color: #1d99b7;
-    --error-color: #ea4c89;
-    --progress-bar-background: #9ba5a8;
-    --progress-bar-fill: #444444;
+    --secondary-color: #6a737b;
+    --tertiary-color: #6a737b;
+    --primary-color: #511378;
+    --error-color: #d20962;
+    --progress-bar-background: #6a737b;
+    --progress-bar-fill: #151515;
 }
 
 * {

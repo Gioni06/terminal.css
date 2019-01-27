@@ -23,9 +23,9 @@ import 'terminal.css'
 
 #### UNPKG CDN 
 
-The css is available via [CDN](https://unpkg.com/terminal.css@0.2.1/dist/terminal.min.css)
+The css is available via [CDN](https://unpkg.com/terminal.css@0.3.0/dist/terminal.min.css)
 ```html
-<link rel="stylesheet" href="https://unpkg.com/terminal.css@0.2.2/dist/terminal.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/terminal.css@0.3.0/dist/terminal.min.css" />
 ```
 
 ## Development
