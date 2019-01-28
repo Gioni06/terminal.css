@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.4.1] - 2019-01-28
+### Added
+- Add terminal prompt style
+
 ## [0.4.0] - 2019-01-28
 ### Added
 - Use static site generator for docs

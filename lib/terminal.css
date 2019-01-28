@@ -15,6 +15,7 @@
     --progress-bar-background: #6a737b;
     --progress-bar-fill: #151515;
     --code-bg-color: #dce2e7;
+    --input-style: dashed;
 }
 
 * {
@@ -139,6 +140,53 @@ h1:after {
 
 h1 + *, .logo + * {
     margin-top: 0;
+}
+
+.terminal-prompt {
+    position: relative;
+}
+.terminal-prompt::before {
+    content: "> ";
+}
+
+.terminal-prompt::after{
+    content: "";
+    -webkit-animation: cursor 1s infinite;
+    animation: cursor 1s infinite;
+    background: var(--primary-color);
+    border-radius: 1px;
+    display: inline-block;
+    height: 1rem;
+    margin-left: 4px;
+    width: 5px;
+    bottom: -1px;
+    position: relative; 
+}
+
+@-webkit-keyframes cursor {
+    0% { opacity: 0 }
+
+    50% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes cursor {
+    0% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
 }
 
 h2, h3, h4, h5, h6 {
@@ -350,7 +398,7 @@ label {
 }
 
 input[type="email"], input[type="text"], input[type="number"], input[type="password"], input[type="search"] {
-    border: 1px dashed var(--font-color);
+    border: 1px var(--input-style) var(--font-color);
     width: 100%;
     padding: .5em;
     font-size: 1em;
@@ -383,7 +431,7 @@ textarea {
     height: auto;
     width: 100%;
     resize: none;
-    border: 1px dashed var(--font-color);
+    border: 1px var(--input-style) var(--font-color);
     width: 100%;
     padding: .5em;
     font-size: 1em;
