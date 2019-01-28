@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <%- include('partials/head') %>
+  </head>
+  <body>
+    <%- include('partials/git-corner') %>
+    <%- include('partials/navigation', { "page": "main" }) %>
+    <div class="container">
+      <p>
+        <%- site.description %>
+      </p>
+      
+      <%- body %>
+      <hr />
+      <div class="components components-grid">
+        <%- include('partials/aside') %>
+        <%- include('partials/components') %>
+      </div>
+    </div>
+    <%- include('partials/bottom-scripts') %>
+  </body>
+</html>

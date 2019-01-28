@@ -1,15 +1,14 @@
 {
   "name": "terminal.css",
   "version": "0.3.2",
-  "description": "Modern and minimalistic CSS framework for terminal enthusiasts",
+  "description": "Modern and minimal CSS framework for terminal lovers.",
   "main": "dist/terminal.min.css",
   "directories": {
-    "docs": "docs",
-    "dist": "dist"
+    "doc": "docs"
   },
   "scripts": {
     "start": "node ./scripts/start.js",
-    "build": "node ./scripts/build.js",
+    "build": "node ./scripts/build.js && node ./scripts/copyFiles.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublish": "npm run build"
   },
@@ -36,7 +35,11 @@
     "clean-css": "^4.2.1",
     "live-server": "^1.2.1",
     "mkdirp": "^0.5.1",
+    "nanogen": "^0.4.2",
     "postcss": "^7.0.14",
     "serve": "^10.1.1"
+  },
+  "dependencies": {
+    "cp-file": "^6.0.0"
   }
 }
