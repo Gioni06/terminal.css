@@ -5,7 +5,7 @@ layout: sans
 
 ## Project Goals
 
-Terminal CSS has no overhead and is lightweight **(<= 2.9k gzip)**. 
+Terminal CSS has no overhead and is lightweight **(~ 3k gzip)**. 
 The source is written in **pure css** to be accessible for everybody and easy to contribute.
 
 ## Markdown ❤️ Terminal CSS 
