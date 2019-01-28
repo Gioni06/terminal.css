@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <%- include('partials/head') %>
+    <style>
+        :root {
+            --global-font-size: 14px;
+            --global-line-height: 1.4em;
+            --global-space: 10px;
+            --font-stack: 'Fira Code',Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
+            --background-color: #151515;
+            --page-width: 65em;
+            --font-color: #efefef;
+            --invert-font-color: #151515;
+            --secondary-color: #787878;
+            --tertiary-color: #787878;
+            --primary-color: #90f57e;
+            --error-color: #ff3c74;
+            --progress-bar-background: #787878;
+            --progress-bar-fill: #90f57e;
+            --code-bg-color: #787878;
+    }
+    </style>
+  </head>
+  <body>
+    <%- include('partials/git-corner') %>
+    <%- include('partials/navigation', { "page": "dark" }) %>
+    <div class="container">
+      <p>
+        <%- site.description %>
+      </p>
+      
+      <%- body %>
+      <hr />
+      <div class="components components-grid">
+        <%- include('partials/aside') %>
+        <%- include('partials/components') %>
+      </div>
+    </div>
+    <%- include('partials/bottom-scripts') %>
+  </body>
+</html>

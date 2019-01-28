@@ -2,6 +2,8 @@ const chokidar = require('chokidar');
 const liveServer = require('live-server');
 const build = require('./utils/build-fn');
 const path = require('path');
+const nanogen = require('nanogen')
+const staticSiteOptions = require('../site.config');
 
 function debounce(func, wait, immediate) {
 	var timeout;
@@ -25,12 +27,14 @@ const serve = (flags) => {
   console.log(`Starting local server at http://localhost:${flags.port}`);
 
   const options = {
-	sourceFile: path.resolve(__dirname, '../src/terminal.css'),
+	sourceFile: path.resolve(__dirname, '../lib/terminal.css'),
 	distFolder: path.resolve(__dirname, '../dist'),
-	docsFolder: path.resolve(__dirname, '../docs')
+	docsFolder: path.resolve(__dirname, '../public'),
+	docsSrcFolder: path.resolve(__dirname, '../src')
   }
 
   build.run(options);
+  nanogen.build({ site: staticSiteOptions.site })
   liveServer.start({
       port: flags.port,
       root: options.docsFolder,
@@ -38,10 +42,11 @@ const serve = (flags) => {
       logLevel: 0
     });
 
-  chokidar.watch(options.sourceFile, { ignoreInitial: true }).on(
+  chokidar.watch([options.sourceFile, options.docsSrcFolder], { ignoreInitial: true }).on(
     'all',
     debounce(() => {
       build.run(options);
+      nanogen.build({ site: staticSiteOptions.site })
       console.log('Waiting for changes...');
     }, 500)
   );
