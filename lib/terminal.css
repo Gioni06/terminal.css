@@ -1,21 +1,21 @@
 :root {
-    --global-font-size: 16px;
+    --global-font-size: 15px;
     --global-line-height: 1.4em;
     --global-space: 10px;
-    --font-stack: 'Fira Code',Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
-    --mono-font-stack: 'Fira Code',Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
+    --font-stack: Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
+    --mono-font-stack: Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
     --background-color: #fff;
-    --page-width: 65em;
+    --page-width: 60em;
     --font-color: #151515;
     --invert-font-color: #fff;
-    --secondary-color: #6a737b;
-    --tertiary-color: #6a737b;
-    --primary-color: #511378;
+    --primary-color: #17a569;
+    --secondary-color: #727578;
     --error-color: #d20962;
-    --progress-bar-background: #6a737b;
+    --progress-bar-background: #727578;
     --progress-bar-fill: #151515;
-    --code-bg-color: #dce2e7;
-    --input-style: dashed;
+    --code-bg-color: #e8eff2;
+    --input-style: solid;
+    --display-h1-decoration: none;
 }
 
 * {
@@ -74,7 +74,6 @@ a {
     cursor: pointer;
     color: var(--primary-color);
     text-decoration: none;
-    border-bottom: 1px solid var(--primary-color);
 }
 
 a:hover {
@@ -136,6 +135,7 @@ h1:after {
     position: absolute;
     bottom: 5px;
     left: 0;
+    display: var(--display-h1-decoration);
 }
 
 h1 + *, .logo + * {
@@ -151,16 +151,15 @@ h1 + *, .logo + * {
 
 .terminal-prompt::after{
     content: "";
-    -webkit-animation: cursor 1s infinite;
-    animation: cursor 1s infinite;
+    animation: cursor 800ms infinite;
     background: var(--primary-color);
-    border-radius: 1px;
+    border-radius: 0px;
     display: inline-block;
-    height: 1rem;
-    margin-left: 4px;
-    width: 5px;
-    bottom: -1px;
-    position: relative; 
+    height: 1em;
+    margin-left: .2em;
+    width: 3px;
+    bottom: -2px;
+    position: relative;
 }
 
 @-webkit-keyframes cursor {
@@ -195,10 +194,14 @@ h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 
-li {
+li, li>ul>li {
     position: relative;
     display: block;
     padding-left: calc(var(--global-space) * 2);
+}
+
+nav>ul>li {
+    padding-left: 0;
 }
 
 li:after {
@@ -209,6 +212,10 @@ li:after {
 
 ul > li:after {
     content: "-";
+}
+
+nav ul > li:after {
+    content: "";
 }
 
 ol {
@@ -400,7 +407,7 @@ label {
 input[type="email"], input[type="text"], input[type="number"], input[type="password"], input[type="search"] {
     border: 1px var(--input-style) var(--font-color);
     width: 100%;
-    padding: .5em;
+    padding: .7em .5em;
     font-size: 1em;
     font-family: var(--font-stack);
     -webkit-appearance: none;
@@ -458,6 +465,21 @@ input, textarea {
 input::placeholder, textarea::placeholder {
     color: var(--secondary-color)!important;
     opacity: 1;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid var(--font-color);
+  -webkit-text-fill-color: var(--font-color);
+  -webkit-box-shadow: 0 0 0px 1000px var(--invert-font-color) inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .btn {
@@ -567,6 +589,11 @@ input::placeholder, textarea::placeholder {
     z-index: 2;
 }
 
+.btn-small {
+    padding: .5em 1.3em!important;
+    font-size: .9em!important;
+}
+
 .btn-group {
     overflow: auto;
 }
@@ -584,7 +611,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .terminal-card > header {
-    color: var(--font-color);
+    color: var(--invert-font-color);
     text-align: center;
     background-color: var(--secondary-color);
     padding: .5em 0;
@@ -618,6 +645,7 @@ input::placeholder, textarea::placeholder {
 .terminal-nav {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 }
 
 .terminal-logo {
@@ -663,15 +691,21 @@ input::placeholder, textarea::placeholder {
     display: none;
 }
 
-.terminal-menu li a {
+.terminal-menu li a:not(.btn) {
     text-decoration: none;
     display: block;
     width: 100%;
     border: none;
+    color: var(--secondary-color);
 }
 
 .terminal-menu li a.active {
-    font-weight: 600;
+    color: var(--font-color);
+}
+
+.terminal-menu li a:hover {
+    background: none;
+    color: inherit;
 }
 
 @media screen and (max-width: 960px) {
@@ -694,6 +728,7 @@ input::placeholder, textarea::placeholder {
 @media only screen and (min-width: 30em) {
     .terminal-nav {
         flex-direction: row;
+        align-items: center;
     }
     .terminal-menu ul {
         flex-direction: row;
@@ -769,7 +804,7 @@ figure > img {
 }
 
 figure > figcaption {
-    color: var(--tertiary-color);
+    color: var(--secondary-color);
     text-align: center;
 }
 
