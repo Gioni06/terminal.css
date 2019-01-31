@@ -20,10 +20,10 @@ When using something like Webpack just install with `npm i terminal.css`.
 import 'terminal.css'
 ```
 
-Terminal CSS is also available via [CDN](https://unpkg.com/terminal.css@0.5.0/dist/terminal.min.css)
+Terminal CSS is also available via [CDN](https://unpkg.com/terminal.css@0.6.0/dist/terminal.min.css)
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/terminal.css@0.5.0/dist/terminal.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/terminal.css@0.6.0/dist/terminal.min.css" />
 ```
 
 ## Themes
