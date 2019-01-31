@@ -6,7 +6,7 @@ This project is at an early development stage. **Expect breaking changes without
 Everything after v1.0.0 will follow [Semantic Versioning](https://semver.org/).
 
 
-## [0.6.] - 2019-01-28
+## [0.6.] - 2019-01-31
 ### Added
 - Add special class `.terminal` to body element to achieve same font-size for the entire page.
 - Multiple small fixes
