@@ -88,7 +88,7 @@ em {
     color: var(--font-color);
 }
 
-blockquote, code, h1, h2, h3, h4, h5, h6, strong, .logo {
+.terminal blockquote, .terminal code, .terminal h1, .terminal h2, .terminal h3, .terminal h4, .terminal h5, .terminal h6, .terminal strong, .terminal .logo {
     font-size: var(--global-font-size);
     font-style: normal;
     font-family: var(--font-stack);
