@@ -1,6 +1,16 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## Pre 1.0 Note
+This project is at an early development stage. **Expect breaking changes without prior notice before v1.0.0**.
+Everything after v1.0.0 will follow [Semantic Versioning](https://semver.org/).
+
+
+## [0.6.] - 2019-01-28
+### Added
+- Add special class `.terminal` to body element to achieve same font-size for the entire page.
+- Multiple small fixes
+
 ## [0.4.1] - 2019-01-28
 ### Added
 - Add terminal prompt style
