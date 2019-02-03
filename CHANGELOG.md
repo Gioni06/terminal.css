@@ -6,6 +6,10 @@ This project is at an early development stage. **Expect breaking changes without
 Everything after v1.0.0 will follow [Semantic Versioning](https://semver.org/).
 
 ## [0.6.1] - 2019-02-03
+- Add twitter link
+- change default primary color
+
+## [0.6.1] - 2019-02-03
 - Fix navigation margin
 - Add table of content component
 
