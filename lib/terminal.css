@@ -675,6 +675,7 @@ select:-webkit-autofill:focus {
     width: 100%;
     flex-grow: 1;
     font-size: var(--global-font-size);
+    margin-top: 0;
 }
 
 .terminal-menu li {
@@ -735,6 +736,7 @@ select:-webkit-autofill:focus {
         justify-items: flex-end;
         align-items: center;
         justify-content: flex-end;
+        margin-top: calc(var(--global-space) * 2);
     }
 
     .terminal-menu li {
