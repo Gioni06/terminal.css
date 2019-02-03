@@ -248,7 +248,7 @@ ol.terminal-toc li::before {
     counter-increment: item;
     position: absolute;
     right: 0;
-    background: white;
+    background: var(--background-color);
     padding: 4px 0 4px 4px;
     bottom: -8px
 }
