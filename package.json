@@ -1,6 +1,6 @@
 {
   "name": "terminal.css",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Modern and minimal CSS framework for terminal lovers.",
   "main": "dist/terminal.min.css",
   "directories": {
