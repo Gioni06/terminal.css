@@ -261,6 +261,12 @@ ol.terminal-toc li a {
     text-align: left;
     padding-right: 4px;
 }
+
+ol.terminal-toc li a:hover {
+    background: var(--primary-color);
+    color: var(--invert-font-color);
+}
+
 blockquote {
     position: relative;
     padding-left: calc(var(--global-space) * 2);
