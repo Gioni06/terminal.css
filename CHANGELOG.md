@@ -5,7 +5,10 @@ All notable changes to this project will be documented in this file.
 This project is at an early development stage. **Expect breaking changes without prior notice before v1.0.0**.
 Everything after v1.0.0 will follow [Semantic Versioning](https://semver.org/).
 
-## [0.6.1] - 2019-02-03
+## [0.6.3] - 2019-02-03
+- Fix Toc hover colors
+
+## [0.6.2] - 2019-02-03
 - Add twitter link
 - change default primary color
 
