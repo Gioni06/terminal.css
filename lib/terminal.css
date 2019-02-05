@@ -218,6 +218,7 @@ pre code {
 
 .terminal-prompt {
   position: relative;
+  white-space: nowrap;
 }
 
 .terminal-prompt::before {
@@ -403,20 +404,10 @@ ol.terminal-toc li a:hover {
 
 hr {
   position: relative;
-  height: calc(var(--global-space) * 2);
   overflow: hidden;
+  margin: calc(var(--global-space) * 4) 0;
   border: 0;
-  margin: calc(var(--global-space) * 2) 0;
-}
-
-hr::after {
-  content: "--------------------------------------------------------------------------------------------------------------------";
-  position: absolute;
-  top: 0;
-  left: 0;
-  line-height: calc(var(--global-space) * 2);
-  width: 100%;
-  word-wrap: break-word;
+  border-bottom: 1px dashed var(--secondary-color);
 }
 
 p {
