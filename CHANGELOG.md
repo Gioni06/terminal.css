@@ -7,6 +7,7 @@ Everything after v1.0.0 will follow [Semantic Versioning](https://semver.org/).
 
 ## [0.6.5] - 2019-02-03
 - Add stylelint linter
+- Change `hr` style
 
 ## [0.6.4] - 2019-02-03
 - Change dark theme colors
