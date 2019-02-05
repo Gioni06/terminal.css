@@ -10,6 +10,7 @@
     "start": "node ./scripts/start.js",
     "build": "node ./scripts/build.js && node ./scripts/copyFiles.js",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "stylelint lib/terminal.css",
     "prepublish": "npm run build"
   },
   "repository": {
@@ -37,7 +38,9 @@
     "mkdirp": "^0.5.1",
     "nanogen": "^0.4.2",
     "postcss": "^7.0.14",
-    "serve": "^10.1.1"
+    "serve": "^10.1.1",
+    "stylelint": "^9.10.1",
+    "stylelint-config-standard": "^18.2.0"
   },
   "dependencies": {
     "cp-file": "^6.0.0"
