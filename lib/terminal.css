@@ -617,6 +617,8 @@ select:-webkit-autofill:focus {
 }
 
 .btn {
+  border-style: solid;
+  border-width: 1px;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -ms-flex-align: center;
