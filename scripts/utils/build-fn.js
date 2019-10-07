@@ -7,15 +7,7 @@ function run({
 	distFolder,
 	docsFolder
 }) {
-	const autoprefixer = require('autoprefixer')({
-		browsers: [
-			'>1%',
-			'last 4 versions',
-			'Firefox ESR',
-			'not ie < 9',
-		],
-		flexbox: 'no-2009'
-	});
+	const autoprefixer = require('autoprefixer')({});
 	const postcss      = require('postcss');
 	const CleanCSS = require('clean-css');
 		
