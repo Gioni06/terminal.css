@@ -34,8 +34,8 @@ To create your own theme just open the dev-tools and edit the CSS Variables. Cop
 
 ## Contributers
 
-- [Ben](https://github.com/othyn)
-- [Matias Korhonen](https://github.com/matiaskorhonen)
+- [Ben](https://othyn.com/)
+- [Matias Korhonen](https://matiaskorhonen.fi/)
 
 <br>
 
