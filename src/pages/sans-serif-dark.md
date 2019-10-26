@@ -29,3 +29,14 @@ Terminal CSS is also available via [CDN](https://unpkg.com/terminal.css@0.7.1/di
 ## Themes
 
 To create your own theme just open the dev-tools and edit the CSS Variables. Copy and paste it to your website. Done!
+
+<br>
+
+## Contributers
+
+- [Ben](https://github.com/othyn)
+- [Matias Korhonen](https://github.com/matiaskorhonen)
+
+<br>
+
+With ❤️ by [Jonas D.](https://jduri.com)
