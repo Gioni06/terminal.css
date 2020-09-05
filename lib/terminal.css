@@ -510,7 +510,7 @@ table caption {
 
 table tbody td:first-child {
   font-weight: 700;
-  color: var(var(--secondary-color));
+  color: var(--secondary-color);
 }
 
 .form {
