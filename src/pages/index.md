@@ -32,10 +32,12 @@ To create your own theme just open the dev-tools and edit the CSS Variables. Cop
 
 <br>
 
-## Contributers
+## Contributors
 
 - [Ben](https://othyn.com/)
 - [Matias Korhonen](https://matiaskorhonen.fi/)
+- [Meghan](https://github.com/nektro)
+- [Lingfeng Zhang](https://ccat3z.xyz)
 
 <br>
 
