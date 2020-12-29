@@ -2,8 +2,10 @@
   --global-font-size: 15px;
   --global-line-height: 1.4em;
   --global-space: 10px;
-  --font-stack: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-  --mono-font-stack: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  --font-stack: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  --mono-font-stack: Menlo, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
   --background-color: #fff;
   --page-width: 60em;
   --font-color: #151515;
@@ -310,7 +312,7 @@ ol {
   counter-reset: item;
 }
 
-ol li:nth-child(n+10)::after {
+ol li:nth-child(n + 10)::after {
   left: -7px;
 }
 
@@ -771,7 +773,7 @@ select:-webkit-autofill:focus {
 }
 
 .terminal-timeline::before {
-  content: ' ';
+  content: " ";
   background: var(--secondary-color);
   display: inline-block;
   position: absolute;
@@ -786,7 +788,7 @@ select:-webkit-autofill:focus {
 }
 
 .terminal-timeline .terminal-card::before {
-  content: ' ';
+  content: " ";
   background: var(--invert-font-color);
   border: 2px solid var(--secondary-color);
   display: inline-block;
@@ -987,3 +989,39 @@ figure > figcaption {
 .hljs-strong {
   font-weight: bold;
 }
+
+.typing {
+overflow: hidden;
+white-space: nowrap;
+animation: typing;
+margin: 0 auto;
+width: auto;
+border-right: 2px solid var(--primary-color);
+display: block;
+position: relative;
+animation-timing-function: steps(44, end);
+        }
+
+
+.anim-typing {
+animation: typing 4s steps(44) 1s 1 normal both,
+blinkTypingCursor 500ms steps(44) infinite normal;
+        }
+
+@keyframes typing {
+from {
+width: 0;
+  }
+to {
+width: 100%;
+  }
+    }
+
+@keyframes blinkTypingCursor {
+from {
+border-right-color: var(--primary-color);
+}
+ to {
+border-right-color: transparent;
+}
+      }
