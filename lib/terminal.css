@@ -156,7 +156,7 @@ blockquote::after {
   color: #9ca2ab;
 }
 
-blockquote *:last-child {
+blockquote > *:last-child {
   margin-bottom: 0;
 }
 
