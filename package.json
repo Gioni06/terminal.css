@@ -7,12 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "start": "node ./scripts/start.js",
-    "build": "node ./scripts/build.js && node ./scripts/copyFiles.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "stylelint lib/terminal.css",
-    "preversion": "npm run lint",
-    "prepublish": "npm run build"
+    "start": "node ./run.js --serve",
+    "build": "node ./run.js",
+    "lint": "stylelint lib/terminal.css"
   },
   "repository": {
     "type": "git",
@@ -32,19 +29,8 @@
   },
   "homepage": "https://terminalcss.xyz",
   "devDependencies": {
-    "autoprefixer": "^9.6.4",
-    "chokidar": "^3.2.1",
-    "clean-css": "^4.2.1",
-    "live-server": "^1.2.1",
-    "mkdirp": "^0.5.1",
-    "postcss": "^7.0.18",
-    "serve": "^11.2.0",
-    "stylelint": "^11.0.0",
-    "stylelint-config-standard": "^19.0.0"
-  },
-  "dependencies": {
-    "cp-file": "^7.0.0",
-    "nanogen": "github:Gioni06/nanogen#master"
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard": "^34.0.0"
   },
   "browserslist": [
     "defaults"

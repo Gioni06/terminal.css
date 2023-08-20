@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {{ template "head.html" . }}
+    <style>
+        :root {
+            --global-font-size: 15px;
+            --global-line-height: 1.4em;
+            --font-stack: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica,
+            Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+            --background-color: #222225;
+            --page-width: 60em;
+            --font-color: #e8e9ed;
+            --invert-font-color: #222225;
+            --secondary-color: #a3abba;
+            --tertiary-color: #a3abba;
+            --primary-color: #62c4ff;
+            --error-color: #ff3c74;
+            --progress-bar-background: #3f3f44;
+            --progress-bar-fill: #62c4ff;
+            --code-bg-color: #3f3f44;
+            --input-style: solid;
+            --display-h1-decoration: none;
+        }
+    </style>
+</head>
+<body class="terminal">
+    {{ template "navigation.html" }}
+    <div class="container">
+        {{ .Content }}
+        <div class="components components-grid">
+            {{ template "aside.html" . }}
+            <main>
+                {{ template "grid.html" . }}
+                <hr />
+                {{ template "nav.html" . }}
+                <hr />
+                {{ template "nav-list.html" . }}
+                <hr />
+                {{ template "lists.html" . }}
+                <hr />
+                {{ template "typography.html" . }}
+                <hr />
+                {{ template "tables.html" . }}
+                <hr />
+                {{ template "special-elements.html" . }}
+                <hr />
+                {{ template "forms.html" . }}
+                <hr />
+                {{ template "progress.html" . }}
+                <hr />
+                {{ template "buttons.html" . }}
+                <hr />
+                {{ template "card.html" . }}
+                <hr />
+                {{ template "timeline.html" . }}
+                <hr />
+                {{ template "alerts.html" . }}
+                <hr />
+                {{ template "figure.html" . }}
+                <hr />
+                {{ template "highlight-js.html" . }}
+                <hr />
+                {{ template "documentation.html" . }}
+                <hr />
+                {{ template "footer.html" . }}
+                <hr />
+                {{ template "version.html" . }}
+            </main>
+        </div>
+    </div>
+    {{ template "bottom-scripts.html" . }}
+</body>
+</html>
