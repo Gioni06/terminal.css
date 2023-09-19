@@ -836,6 +836,7 @@ select:-webkit-autofill:focus {
   .terminal-nav {
     flex-direction: row;
     align-items: center;
+    gap: 100vh;
   }
 
   .terminal-menu ul {
