@@ -39,6 +39,7 @@ To create your own theme just open the dev-tools and edit the CSS Variables. Cop
 - [Matias Korhonen](https://matiaskorhonen.fi/)
 - [Meghan](https://github.com/nektro)
 - [Lingfeng Zhang](https://ccat3z.xyz)
+- [herrbischoff](https://github.com/herrbischoff)
 
 <br>
 
