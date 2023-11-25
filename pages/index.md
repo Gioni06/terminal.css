@@ -1,6 +1,6 @@
 ---
 title: Terminal CSS
-description: Terminal CSS is a modern, simple, and accessible CSS framework.
+description: A modern and minimal CSS framework for terminal lovers.
 layout: default
 ---
 
