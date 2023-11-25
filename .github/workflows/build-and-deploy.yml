@@ -67,15 +67,16 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Download Artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: dist
-
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20' # Specify your Node.js version here
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
 
       - name: Publish to NPM
         run: npm publish
@@ -91,13 +92,20 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Download Artifact
-        uses: actions/download-artifact@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          name: public
+          node-version: '20' # Specify your Node.js version here
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
 
       - uses: jsmrcaga/action-netlify-deploy@v2.0.0
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_DEPLOY_TO_PROD: true
+          build_directory: public

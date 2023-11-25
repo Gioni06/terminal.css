@@ -6,6 +6,9 @@
   "directories": {
     "doc": "docs"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "start": "node ./run.js --serve",
     "build": "node ./run.js",
