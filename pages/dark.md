@@ -40,6 +40,7 @@ To create your own theme just open the dev-tools and edit the CSS Variables. Cop
 - [Meghan](https://github.com/nektro)
 - [Lingfeng Zhang](https://ccat3z.xyz)
 - [herrbischoff](https://github.com/herrbischoff)
+- [Byeon Jaewoo](https://github.com/plastic041)
 
 <br>
 
