@@ -209,13 +209,11 @@ pre code {
   font-size: var(--global-font-size);
   font-style: normal;
   font-family: var(--font-stack);
-  color: var(--font-color);
 }
 
 .terminal code {
   font-size: var(--global-font-size);
   font-style: normal;
-  color: var(--font-color);
 }
 
 .terminal-prompt {
@@ -414,7 +412,6 @@ hr {
 
 p {
   margin: 0 0 var(--global-line-height);
-  color: var(--font-color);
 }
 
 .container {
@@ -959,6 +956,34 @@ figure {
 figure > figcaption {
   color: var(--secondary-color);
   text-align: center;
+}
+
+.terminal-banner {
+  background-color: var(--font-color);
+  color: var(--invert-font-color);
+  padding: calc(var(--global-space) * 2);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.terminal-banner > .container {
+  max-width: var(--page-width);
+}
+
+.terminal-banner > .container,
+.terminal-banner > .container-fluid {
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* stylelint-disable */
+@media screen and (min-width: 30rem) {
+  /* stylelint-enable */
+  .terminal-banner {
+    flex-direction: row;
+  }
 }
 
 .hljs {

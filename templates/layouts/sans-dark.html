@@ -25,6 +25,7 @@
     </style>
 </head>
 <body class="terminal">
+    {{ template "banner.html" . }}
     {{ template "navigation.html" . }}
     <div class="container">
         {{ .Content }}
