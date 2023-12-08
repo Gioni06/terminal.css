@@ -5,6 +5,42 @@
         document.querySelectorAll("pre code").forEach(block => {
             window.hljs.highlightBlock(block);
         });
+
+        // Get the computed style of the root element (usually :root in CSS)
+        const rootStyle = getComputedStyle(document.documentElement);
+
+        // Function to update the display element with the CSS variable value, preserving inner span
+        function updateDisplayElementPreservingSpan(cssVariable, displayElementId) {
+            const value = rootStyle.getPropertyValue(cssVariable).trim();
+            const displayElement = document.getElementById(displayElementId);
+            if (displayElement) {
+                // Preserve the inner span if it exists
+                const spanElement = displayElement.querySelector('.color-preview');
+                if (spanElement) {
+                    displayElement.innerHTML = `<span class="color-preview" style="background-color: ${value};"></span>${value}`;
+                } else {
+                    displayElement.textContent = value;
+                }
+            }
+        }
+        // Update each display element with its corresponding CSS variable value
+        updateDisplayElementPreservingSpan('--global-font-size', 'css-global-font-size');
+        updateDisplayElementPreservingSpan('--global-line-height', 'css-global-line-height');
+        updateDisplayElementPreservingSpan('--global-space', 'css-global-space');
+        updateDisplayElementPreservingSpan('--font-stack', 'css-font-stack');
+        updateDisplayElementPreservingSpan('--mono-font-stack', 'css-mono-font-stack');
+        updateDisplayElementPreservingSpan('--background-color', 'css-background-color');
+        updateDisplayElementPreservingSpan('--font-color', 'css-font-color');
+        updateDisplayElementPreservingSpan('--invert-font-color', 'css-invert-font-color');
+        updateDisplayElementPreservingSpan('--primary-color', 'css-primary-color');
+        updateDisplayElementPreservingSpan('--secondary-color', 'css-secondary-color');
+        updateDisplayElementPreservingSpan('--error-color', 'css-error-color');
+        updateDisplayElementPreservingSpan('--progress-bar-background', 'css-progress-bar-background');
+        updateDisplayElementPreservingSpan('--progress-bar-fill', 'css-progress-bar-fill');
+        updateDisplayElementPreservingSpan('--code-bg-color', 'css-code-bg-color');
+        updateDisplayElementPreservingSpan('--block-background-color', 'css-block-background-color');
+        updateDisplayElementPreservingSpan('--input-style', 'css-input-style');
+        updateDisplayElementPreservingSpan('--display-h1-decoration', 'css-display-h1-decoration');
     });
 </script>
 <!-- Fathom - beautiful, simple website analytics -->
