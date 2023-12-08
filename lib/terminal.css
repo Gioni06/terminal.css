@@ -451,7 +451,7 @@ img {
   border: 6px solid transparent;
   border-top-color: var(--progress-bar-fill);
   position: absolute;
-  top: -12px;
+  top: -6px;
   right: -6px;
 }
 
@@ -463,7 +463,7 @@ img {
   white-space: nowrap;
   position: absolute;
   border: 6px solid transparent;
-  top: -38px;
+  top: -32px;
   right: 0;
   transform: translateX(50%);
 }
