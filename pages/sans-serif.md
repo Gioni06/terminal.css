@@ -9,6 +9,10 @@ layout: sans
 Terminal CSS has no overhead and is lightweight **(~ 3k gzip)**. 
 The source is written in **pure css** to be accessible for everybody and easy to contribute.
 
+## AI Assisted Documentation
+
+You can use a **🤖 CustomGPT** trained on the documentation and source code of Terminal CSS. It's available for ChatGPT [Terminal CSS Guide](https://chat.openai.com/g/g-iVVi4mrUf-terminal-css-guide). Check it out!
+
 ## Markdown ❤️ Terminal CSS 
 
 It's perfect for your *personal website*, *blog*, or *side project*.
