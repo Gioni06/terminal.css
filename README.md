@@ -23,7 +23,7 @@ import 'terminal.css'
 Terminal CSS is also available via [CDN](https://unpkg.com/terminal.css)
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.5/dist/terminal.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/terminal.css" />
 ```
 
 ## Themes
