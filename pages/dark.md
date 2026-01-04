@@ -13,6 +13,8 @@ The source is written in **pure css** to be accessible for everybody and easy to
 
 You can use a **🤖 CustomGPT** trained on the documentation and source code of Terminal CSS. It's available for ChatGPT [Terminal CSS Guide](https://chat.openai.com/g/g-iVVi4mrUf-terminal-css-guide). Check it out!
 
+For other AI models like Claude, Gemini, or local LLMs, check out the [llms.txt](/llms.txt).
+
 ## Markdown ❤️ Terminal CSS 
 
 It's perfect for your *personal website*, *blog*, or *side project*.

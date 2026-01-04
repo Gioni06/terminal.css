@@ -1,0 +1,490 @@
+# Terminal.css
+
+> Terminal.css is a lightweight, modern CSS framework (~3KB gzipped) with a retro terminal aesthetic. It uses monospace fonts, ASCII decorations, and minimal styling to create a developer-friendly look. The framework is pure CSS with no JavaScript dependencies and uses CSS custom properties for easy theming.
+
+## Important Usage Guidelines
+
+When generating HTML with Terminal.css, always try to use only the existing classes and components provided by the framework. Avoid writing custom CSS. The framework is designed to handle layouts, typography, forms, and UI components out of the box. If a design requirement cannot be met with the existing classes, first consider if the design can be simplified to work with the available components.
+
+Add the class `terminal` to the `<body>` tag to enable terminal-style typography where all headings and text elements use the same font size.
+
+## CSS Custom Properties (Theming)
+
+Terminal.css uses CSS variables for theming. Override these in `:root` to customize:
+
+```css
+:root {
+  --global-font-size: 15px;
+  --global-line-height: 1.4em;
+  --global-space: 10px;
+  --font-stack: "Menlo", "Monaco", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", serif;
+  --mono-font-stack: "Menlo", "Monaco", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", serif;
+  --background-color: #fff;
+  --page-width: 60em;
+  --font-color: #151515;
+  --invert-font-color: #fff;
+  --primary-color: #1a95e0;
+  --secondary-color: #727578;
+  --error-color: #d20962;
+  --progress-bar-background: #727578;
+  --progress-bar-fill: #151515;
+  --code-bg-color: #e8eff2;
+  --input-style: solid;
+  --display-h1-decoration: none;
+  --block-background-color: var(--background-color);
+}
+```
+
+## Dark Mode
+
+For dark mode, override the color variables in a `<style>` tag in your `<head>`:
+
+```css
+:root {
+  --background-color: #222225;
+  --font-color: #e8e9ed;
+  --invert-font-color: #222225;
+  --secondary-color: #a3abba;
+  --tertiary-color: #a3abba;
+  --primary-color: #62c4ff;
+  --error-color: #ff3c74;
+  --progress-bar-background: #3f3f44;
+  --progress-bar-fill: #62c4ff;
+  --code-bg-color: #3f3f44;
+}
+```
+
+## Layout
+
+### Container
+
+Use `.container` for a centered, max-width container or `.container-fluid` for full-width with padding:
+
+```html
+<div class="container">
+  <!-- Content with max-width -->
+</div>
+
+<div class="container-fluid">
+  <!-- Full-width content with padding -->
+</div>
+```
+
+## Typography
+
+### Headings
+
+Headings `<h1>` through `<h6>` are styled with the monospace font. The `<h1>` element can display an ASCII decoration line below it (set `--display-h1-decoration: block` to enable).
+
+```html
+<h1>Main Title</h1>
+<h2>Section Title</h2>
+<h3>Subsection</h3>
+```
+
+### Terminal Class
+
+Add class `terminal` to the body for uniform font sizing across all elements:
+
+```html
+<body class="terminal">
+  <h1>Same size as body text</h1>
+  <p>All text is uniform</p>
+</body>
+```
+
+### Blockquotes
+
+Blockquotes display with `>` characters on the left side:
+
+```html
+<blockquote>
+  <p>This is a quote with terminal-style decoration.</p>
+</blockquote>
+```
+
+### Code
+
+Inline code uses backtick decoration. Code blocks use `<pre><code>`:
+
+```html
+<p>Use the <code>terminal</code> class.</p>
+
+<pre><code>function hello() {
+  console.log("Hello, World!");
+}</code></pre>
+```
+
+### Terminal Prompt
+
+Animated cursor prompt effect:
+
+```html
+<p class="terminal-prompt">Enter command</p>
+```
+
+## Lists
+
+### Unordered Lists
+
+Display with `-` prefix:
+
+```html
+<ul>
+  <li>First item</li>
+  <li>Second item</li>
+  <li>Third item</li>
+</ul>
+```
+
+### Ordered Lists
+
+Auto-numbered with counters:
+
+```html
+<ol>
+  <li>Step one</li>
+  <li>Step two</li>
+  <li>Step three</li>
+</ol>
+```
+
+### Table of Contents
+
+Use `.terminal-toc` for dotted-line table of contents:
+
+```html
+<ol class="terminal-toc">
+  <li><a href="#section1">Introduction</a></li>
+  <li><a href="#section2">Getting Started</a></li>
+  <li><a href="#section3">Components</a></li>
+</ol>
+```
+
+## Navigation
+
+### Terminal Nav and Menu
+
+Responsive navigation that stacks vertically on mobile:
+
+```html
+<nav class="terminal-nav">
+  <div class="logo">Site Name</div>
+  <div class="terminal-menu">
+    <ul>
+      <li><a href="/" class="active">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/login" class="btn btn-primary btn-small">Login</a></li>
+    </ul>
+  </div>
+</nav>
+```
+
+## Buttons
+
+### Button Variants
+
+```html
+<!-- Default button -->
+<button class="btn btn-default">Default</button>
+
+<!-- Primary button (uses --primary-color) -->
+<button class="btn btn-primary">Primary</button>
+
+<!-- Error button (uses --error-color) -->
+<button class="btn btn-error">Error</button>
+
+<!-- Ghost buttons (transparent background, border only) -->
+<button class="btn btn-ghost">Ghost</button>
+<button class="btn btn-default btn-ghost">Default Ghost</button>
+<button class="btn btn-primary btn-ghost">Primary Ghost</button>
+<button class="btn btn-error btn-ghost">Error Ghost</button>
+```
+
+### Button Sizes
+
+```html
+<button class="btn btn-default btn-small">Small Button</button>
+<button class="btn btn-default">Normal Button</button>
+```
+
+### Button Block and Groups
+
+```html
+<!-- Full-width button -->
+<button class="btn btn-default btn-block">Full Width</button>
+
+<!-- Button group -->
+<div class="btn-group">
+  <button class="btn btn-default btn-ghost">One</button>
+  <button class="btn btn-default btn-ghost">Two</button>
+  <button class="btn btn-default btn-ghost">Three</button>
+</div>
+```
+
+## Forms
+
+### Basic Form Structure
+
+```html
+<form class="form">
+  <fieldset>
+    <legend>Login Form</legend>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="user@example.com">
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter password">
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" rows="4" placeholder="Your message"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="country">Country</label>
+      <select id="country">
+        <option>Select country</option>
+        <option>Germany</option>
+        <option>France</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </fieldset>
+</form>
+```
+
+### Supported Input Types
+
+- `text`, `email`, `password`, `number`, `search`, `date`, `time`
+- `textarea` for multiline text
+- `select` for dropdowns (styled with custom arrow)
+
+Inputs show error styling automatically when invalid and not empty (`:not(:placeholder-shown):invalid`).
+
+## Tables
+
+Full-width tables with bordered cells:
+
+```html
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Role</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Alice</td>
+      <td>Developer</td>
+      <td>Active</td>
+    </tr>
+    <tr>
+      <td>Bob</td>
+      <td>Designer</td>
+      <td>Away</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th colspan="3">Total: 2 users</th>
+    </tr>
+  </tfoot>
+</table>
+```
+
+## Cards
+
+### Terminal Card
+
+```html
+<div class="terminal-card">
+  <header>Card Title</header>
+  <div>
+    <p>Card content goes here. Cards have a header with inverted colors and a body section.</p>
+  </div>
+</div>
+```
+
+## Timeline
+
+Vertical timeline with cards:
+
+```html
+<div class="terminal-timeline">
+  <div class="terminal-card">
+    <header>2024</header>
+    <div>
+      <p>First event description.</p>
+    </div>
+  </div>
+  <div class="terminal-card">
+    <header>2023</header>
+    <div>
+      <p>Second event description.</p>
+    </div>
+  </div>
+</div>
+```
+
+## Progress Bars
+
+```html
+<!-- Simple progress bar -->
+<div class="progress-bar">
+  <div class="progress-bar-filled" style="width: 60%;"></div>
+</div>
+
+<!-- Progress bar with percentage label -->
+<div class="progress-bar progress-bar-show-percent">
+  <div class="progress-bar-filled" style="width: 75%;" data-filled="75%"></div>
+</div>
+
+<!-- Progress bar without arrow indicator -->
+<div class="progress-bar progress-bar-no-arrow">
+  <div class="progress-bar-filled" style="width: 40%;"></div>
+</div>
+```
+
+## Alerts
+
+```html
+<!-- Default alert -->
+<div class="terminal-alert">
+  This is a default alert message.
+</div>
+
+<!-- Primary alert -->
+<div class="terminal-alert terminal-alert-primary">
+  This is a primary alert message.
+</div>
+
+<!-- Error alert -->
+<div class="terminal-alert terminal-alert-error">
+  This is an error alert message.
+</div>
+```
+
+## Media Object
+
+For content with images/avatars:
+
+```html
+<div class="terminal-media">
+  <div class="terminal-media-left">
+    <div class="terminal-avatarholder">
+      <img src="avatar.jpg" alt="User">
+    </div>
+  </div>
+  <div class="terminal-media-body">
+    <div class="terminal-media-heading">Username</div>
+    <div class="terminal-media-content">
+      <p>This is the media content next to the avatar.</p>
+    </div>
+  </div>
+</div>
+```
+
+## Figures
+
+```html
+<figure>
+  <img src="image.jpg" alt="Description">
+  <figcaption>Image caption in secondary color</figcaption>
+</figure>
+```
+
+## Banner
+
+Full-width banner section:
+
+```html
+<div class="terminal-banner">
+  <div class="container">
+    <p>Banner content - announcements, notices, etc.</p>
+  </div>
+</div>
+```
+
+## Placeholder
+
+Gray placeholder box for images or content:
+
+```html
+<div class="terminal-placeholder" style="height: 200px;">
+  Placeholder Text
+</div>
+```
+
+## Horizontal Rule
+
+Dashed separator line:
+
+```html
+<hr>
+```
+
+## Syntax Highlighting
+
+Terminal.css includes highlight.js compatible classes. Wrap code in `<pre><code class="hljs">` for syntax highlighting support.
+
+## Responsive Breakpoints
+
+- **480px**: Form width adjustments
+- **960px**: Label display changes, scrollbar styling
+- **30rem (~480px)**: Navigation switches from vertical to horizontal
+
+## Complete Page Example
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Terminal Site</title>
+  <link rel="stylesheet" href="terminal.min.css">
+</head>
+<body class="terminal">
+  <div class="container">
+    <nav class="terminal-nav">
+      <div class="logo">MySite</div>
+      <div class="terminal-menu">
+        <ul>
+          <li><a href="/" class="active">Home</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <h1>Welcome</h1>
+
+    <p>This is a terminal-styled website using only the built-in classes.</p>
+
+    <div class="terminal-card">
+      <header>Featured</header>
+      <div>
+        <p>Card content here.</p>
+        <button class="btn btn-primary">Learn More</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+```
+
+## Optional
+
+- [Terminal.css Website](https://terminalcss.xyz): Live demos and documentation
+- [GitHub Repository](https://github.com/Gioni06/terminal.css): Source code and issue tracker
+- [npm Package](https://www.npmjs.com/package/terminal.css): Install via npm
